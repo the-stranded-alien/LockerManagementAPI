@@ -21,7 +21,7 @@ public class CustomerController {
         return new ResponseEntity<>(customer, HttpStatus.OK);
     }
 
-    @PostMapping("/")
+    @PostMapping
     public ResponseEntity<String> addCustomer(@RequestBody Customer customer) {
         try {
             this.customerService.saveCustomer(customer);
